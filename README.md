@@ -1,158 +1,78 @@
-# Vexo = Vue.js Style + Hexo 
+﻿# hexo-theme-vexo
 
-> Vexo is a Hexo theme inspired by [Vue.js](https://cn.vuejs.org) official website.
+[hexo-theme-vexo](https://github.com/whjin/hexo-theme-vexo) 是一款类 [Vue.js](https://cn.vuejs.org) 官网主题，特色是简洁明快。
 
-[![Build Status](https://travis-ci.org/yanm1ng/hexo-theme-vexo.svg?branch=master)](https://travis-ci.org/yanm1ng/hexo-theme-vexo)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-
-## Intro
+# 简介 #
 
 ![](http://file.muyutech.com/vexo.png)
 
-## Demo
+# Demo #
 
-[Live Example](https://yanm1ng.github.io/)
+这个我的个人博客，可查看 [live demo](https://whjin.github.io/)
 
-## Features
+# 安装使用 #
 
-* Fully Responsive
-* Baidu Analytics
-* [Youyan](http://www.uyan.cc/)
-* [Gitment](https://imsun.github.io/gitment/)
-* Share Qrcode
-* SEO
-* Immersive Status Bar
+1、先安装最新版本的 `node.js`、`Git base`以及 [Hexo](http://ibruce.info/2013/11/22/hexo-your-blog/)
 
-## Install
+2、把 `Hexo` 基础模板完成后，进入 `themes` 文件夹，下载主题，尽量使用 **SSH** 
 
-1. Download/Checkout this theme into your project
+    git clone git@github.com:whjin/hexo-theme-vexo.git
 
-   ```
-   cd your-hexo-folder
+3、修改 `_config.yml` 里面的配置为自己的内容。
 
-   git clone https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo
+# 全局配置 #
 
-   cp -R themes/vexo/_source/* source/
-   ```
+因为 **Hexo** 外层全局配置也是非常重要且关键的，考虑到这点，我把全局配置的文件内容上传到 **Github**，点击[这里](https://github.com/whjin/myBlog)查看。
 
-2. Modify `_config.yml` with your own info. look like this
+# 更新升级 #
 
-   ```
-   themes: vexo
-   ```
+有时间我会修改或更新这个主题，更新内容会同步到这个 **README.md**，大家可以查看更新项，如果喜欢，可以选择更新一下。进行主题文件夹 `cd themes/vexo`
 
-   Here theme's name must same as the theme folder name.
+    git pull
 
-3. Or you can copy my theme `_config.yml` into you hexo blog directory , replace default `_config.yml`
+# 文章 #
 
-4. That's all , hope you will like :)
+文章的页头是这样的：
 
-## Update
+    ---
+    title: 
+    date: 2017-10-06 09:23:18
+    category: ["cate1"]
+    tags: ["tag1","tag2"]
+    ---
+    这里可以用 more 进行分割，作为摘要显示。
+    <!--more-->
 
-```
-cd themes/vexo
-git pull
-```
+# 更新日志 #
 
-## Post
+2017/12/14 0:01:16 
 
-The **front-matter** of a post looks like that:
+# 主题特点 #
 
-```
----
-title: "Hello World"
-date: 2016-06-10 23:00
-banner: http://your-banner-image-link.jpg
-tags:
- - Movies
- - Life
----
-```
+这个 **hexo** 主题是在[原版](https://github.com/yanm1ng/hexo-theme-vexo)的基础上加上自己偏爱的元素，基本上没有做太多的修改， 只需要在配置文件 `_config.yml` 里面填入个人项即可。包含的内容有：
 
-Add to top of your article markdown file. 
+1. [百度统计](https://tongji.baidu.com/web/welcome/login)，这个已经集成在 `theme/layout/page.ejs`页面，只需要参照百度统计的教程把配置内容更换成自己的就可以了。
+2. 评论留言使用的是[畅言](http://changyan.kuaizhan.com/)，注册畅言需要进行网站备案，可以使用[这里](http://bubuzou.com/)的备案号填写资料，非常方便。有什么不明白的地方可以提 `Issues`，我经常登录 **Github**，有时间会提供详细解答。
+3. SEO、分享都在 `theme/layout/page.js` 页面。
 
-## Change Log  
-**2017-08-08**
-* Added article custom banner
-* Fixed gitment error
+# 赞赏 #
 
-**2017-06-27** 
-* Added image-zoom
-* Added project-link
+主题添加了赞赏页面，只需要更换成自己的二维码即可，在 `themes/source/css/images` 文件夹里进行替换。
 
-**2017-06-25**
-* Added image load `onerror` replace default image
-* Added page [loading-bar](https://github.com/rstacruz/nprogress)
-* Fixed bugs
+想要使用原版样式可以参考[这里](https://github.com/yanm1ng/hexo-theme-vexo)
 
-**2017-06-23** 
-* Added project page to show github project
-* Fixed share url error
-* Support markdown `table` & `hr`
+# 页脚统计 #
 
-**2017-06-20**  
-* Added personal link icons, support: 
-  * github 
-  * zhihu 
-  * twitter 
-  * weibo
-* Fixed bugs
+页面使用了 [不蒜子](http://busuanzi.ibruce.info/) 进行访问量统计，只需要改为自己的内容即可。
 
-**2017-06-15**  
-* Add personal about page
-* Replace font-family
-* Ignore text-autosizer/font-boosting on mobile-device
-* Fixed bugs
+更多内容查看 [不如](http://ibruce.info/)
 
-**2017-06-12**  
-* Added enter-out transition
-* Fixed bugs
+# About #
 
-**2017-06-11**
-* Added archive page
-* Fixed HighLight code line-number bug
-* Adjust home post display problem
-* Thanks @ky0ncheng issue
+- 喜欢这个主题的朋友请给个 **Star**，**Fork**或者关注一下。
+- 有使用上的疑问，可以提 `Issues`。
+- 感谢 [@yanm1ng](https://github.com/yanm1ng)，[@Evan You](https://github.com/yyx990803)，[@Hexo](https://hexo.io/)，以及[@whjin](https://github.com/whjin) 对本主题的贡献！
 
-## Comment
+# LICENSE #
 
-Vexo use [Gitment](https://github.com/imsun/gitment) as the third party discussion system.
-
-You can easily complete your comment configuration by just adding your settings into `_config.yml`
-
-```
-# Gitment
-gitment_owner: yanm1ng
-gitment_repo: yanm1ng.github.io
-gitment_oauth_id: 
-gitment_oauth_secret: 
-```
-
-How to use Gitment ? [See](https://imsun.github.io/gitment/)
-
-## Reward
-
-You can replace your own Alipay/Wechat qrcode in `themes/source/css/images` 
-
-Here the name must same as `alipay.jpg` or `wechat.jpg`.
-
-## Links
-
-You can easily add your social account by just adding your settings into `_config.yml`
-```
-# Links
-weibo_username: your_weibo_account
-twitter_username: your_twitter_account
-github_username: your_github_account
-zhihu_username: your_zhihu_account
-```
-
-## About
-
-- Give a star if you like , fork or just clone to use , and also you can help me fix bugs and add new feature :)
-- If you have any problem or requirement , just open an issue here and i will help you.
-- Thanks to [@imsun](https://github.com/imsun) , [@Evan You](https://github.com/yyx990803) and [@Hexo](https://hexo.io).
-
-## LICENSE
-MIT
+[MIT](https://opensource.org/licenses/MIT)
